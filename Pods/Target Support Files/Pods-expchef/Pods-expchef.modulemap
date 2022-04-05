@@ -1,0 +1,6 @@
+framework module Pods_expchef {
+  umbrella header "Pods-expchef-umbrella.h"
+
+  export *
+  module * { export * }
+}

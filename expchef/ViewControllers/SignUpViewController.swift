@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FirebaseAuth
+//import FirebaseAuth
 import Firebase
 
 class SignUpViewController: UIViewController {
@@ -55,29 +55,62 @@ class SignUpViewController: UIViewController {
         
         else{
             
+            // Create cleaned versions of the data
+            let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
             // Create user
-            Auth.auth().createUser(withEmail: "", password: "") { (result, err) in
+            Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 
                 // Check for errors
                 if err != nil {
                     // There was an error creating the user
+                    // err?.localizedDescription - can you use this to show explicit error to user
                     self.showError("Error creating user")
                     self.errorLabel.textColor = UIColor.red
                 }
                 else{
+                    
                     // User was created successfully, now store the first name and last name
-//                    let db = Firestore.firestore()
+                    let db = Firestore.firestore()
+                    
+                    // Uid is from result after auth gets created at createUser
+                    db.collection("users").addDocument(data: ["firstname":firstName,"lastname":lastName, "uid":result!.user.uid]) { (error) in
+                        
+                        // The user has been created. This failure would be for first and last name. Account would still be created though
+                        if error != nil {
+                            // Show error message
+                            self.showError("Error saving first and last name data. Entry still created.")
+                        }
+                    }
                 }
             }
         }
         
         // Transition to home screen
+        self.transitionToHome()
         
     }
     
     func showError(_ message:String){
         errorLabel.text = message
         errorLabel.alpha = 1
+    }
+    
+    func transitionToHome(){
+        
+        // Because this returns a viewcontroller. We have to use "as" to typecast it to HomeViewController type
+//        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+//
+//        view.window?.rootViewController = homeViewController
+//        view.window?.makeKeyAndVisible()
+        let homeUITabViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeUITabViewController) as? UITabBarController
+        
+        self.view.window?.rootViewController = homeUITabViewController
+        self.view.window?.makeKeyAndVisible()
+        
     }
     
     override func viewDidLoad() {
