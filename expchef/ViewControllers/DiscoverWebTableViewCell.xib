@@ -101,7 +101,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="1Rw-R2-TQw"/>
-            <color key="backgroundColor" systemColor="systemGrayColor"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="foodTitleLabel" destination="v4G-Dm-lNT" id="CZK-wW-33S"/>
+            </connections>
             <point key="canvasLocation" x="159.42028985507247" y="95.424107142857139"/>
         </tableViewCell>
     </objects>
@@ -115,9 +118,6 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

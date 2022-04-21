@@ -9,6 +9,7 @@ import UIKit
 
 class DiscoverWebTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var foodTitleLabel: UILabel!
 //    @IBOutlet var collectionView: UICollectionView!
     
     override func awakeFromNib() {
@@ -18,7 +19,8 @@ class DiscoverWebTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
+//        print("I am selected")
         // Configure the view for the selected state
     }
     

@@ -14,5 +14,6 @@ target 'expchef' do
 	pod 'Firebase/Firestore'
 	pod 'FirebaseFirestoreSwift'
 	pod 'Firebase/Storage'
+	pod 'Firebase/Database'
 
 end

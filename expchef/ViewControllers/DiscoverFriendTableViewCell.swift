@@ -23,17 +23,13 @@ class DiscoverFriendTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
     override func awakeFromNib() {
         super.awakeFromNib()
         
-//        collectionView.delegate = self
+        collectionView.delegate = self
         collectionView.dataSource = self
-//        let friendNib = UINib(nibName: "DiscoverFriendTableViewCell", bundle: nil)
-//        let friendNib = UINib(nibName: "DiscoverFriendCollectionViewCell", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UITableView
         collectionView.register(DiscoverFriendCollectionViewCell.nib(), forCellWithReuseIdentifier: DiscoverFriendCollectionViewCell.identifier)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -54,4 +50,12 @@ class DiscoverFriendTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
         return cell
     }
     
+    // When Friend Recipes Collection is Clicked
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        if let recipeview = super.storyboard?.instantiateViewController(identifier: "RecipeVC") as? RecipeViewController{
+//            recipeview.fname = items[indexPath.row-1].title
+//            self.navigationController?.pushViewController(recipeview, animated: true)
+//        }
+//    }
+
 }

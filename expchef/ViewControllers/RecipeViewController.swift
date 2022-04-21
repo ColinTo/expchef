@@ -12,14 +12,42 @@ class RecipeViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var label: UILabel!
+    @IBOutlet var foodName: UITextView!
     
+    // Holds data for Views
+    var fname = ""
+    
+    // Reference to Firebase storage system
     private let storage = Storage.storage().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Allows it to have n number of lines on line wrap
         label.numberOfLines = 0
         label.textAlignment = .center
         imageView.contentMode = .scaleAspectFit
+        foodName.text = fname
+        
+        guard let urlString = UserDefaults.standard.value(forKey:"url") as? String,
+        let url = URL(string: urlString) else{
+            return
+        }
+        
+        label.text = urlString
+        
+        let task = URLSession.shared.dataTask(with: url, completionHandler: { data, _, error in
+            guard let data = data, error == nil else{
+                return
+            }
+            
+            DispatchQueue.main.async{
+                let image = UIImage(data: data)
+                self.imageView.image = image
+            }
+
+        })
+        
+        task.resume()
     }
     
     @IBAction func didTapButton(){
@@ -55,8 +83,18 @@ class RecipeViewController: UIViewController, UIImagePickerControllerDelegate, U
                     return
                 }
                 
-                let urlString = url.absoluteString
+                // Original
+//                let urlString = url.absoluteString
+                // Luffy Test - Luffy only changes when picker appears and after you upload. Put this in viewload in profileviewlater
+                let urlString = "https://firebasestorage.googleapis.com/v0/b/expchef.appspot.com/o/images%2Favatars%2Fdp_luffy.jpg?alt=media&token=0209f366-eb7b-4839-b980-fa80810d8e38"
                 print("Download URL: \(urlString)")
+                
+                DispatchQueue.main.async {
+                    self.label.text = urlString
+                    self.imageView.image = image
+                }
+                
+                // This is so we can later download the latest image
                 UserDefaults.standard.set(urlString, forKey: "url")
             })
         })
