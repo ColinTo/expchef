@@ -15,28 +15,13 @@ class ProfileFriendIconViewCell: UICollectionViewCell{
     // Download the data from the Internet or FireBase or Realm
     var items = Item.fetchItem()
 
-    var imageView = UIImageView()
-    var label = UILabel()
+    var profilePicture = UIImageView()
+    var name = UILabel()
     var friendList:[String] = []
 //    var friendList:[String] = []
     
     override init(frame: CGRect){
         super.init(frame: frame)
-        
-        let db = Firestore.firestore()
-        
-        // Populate everyone from your friend list
-        db.collection("users").whereField("email", isEqualTo: "colin.qlt@gmail.com").getDocuments(){(querySnapshot, err) in
-            if let err = err{
-                print("Error getting documents: \(err)")
-            }
-            else{
-                for document in querySnapshot!.documents{
-                    self.friendList = document.get("friends_id_list") as! [String]
-                    print(self.friendList)
-                }
-            }
-        }
         
 //        db.collection("users").getDocuments(){(querySnapshot, err) in
 //            if let err = err{
@@ -67,14 +52,17 @@ class ProfileFriendIconViewCell: UICollectionViewCell{
 //        })
 
         
-        imageView.image = UIImage(systemName: "house")
-        imageView.backgroundColor = UIColor.green
-        contentView.addSubview(imageView)
+//        profilePicture.image = UIImage(systemName: "house")
+//        profilePicture.backgroundColor = UIColor.green
+//        profilePicture.layer.cornerRadius = profilePicture.frame.size.width / 2
+        profilePicture.layer.cornerRadius = 30
+        profilePicture.clipsToBounds = true
+        contentView.addSubview(profilePicture)
 
         // Customize labelview
-        label.text = "Hello"
-        label.textColor = UIColor.init(red: 169, green: 169, blue: 169, alpha: 1)
-        contentView.addSubview(label)
+//        name.text = "Hello"
+        name.textColor = UIColor.init(red: 169, green: 169, blue: 169, alpha: 1)
+        contentView.addSubview(name)
         
     }
 
@@ -85,15 +73,36 @@ class ProfileFriendIconViewCell: UICollectionViewCell{
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        label.frame = CGRect(x: (contentView.frame.size.width/2)-20,
+        name.frame = CGRect(x: (contentView.frame.size.width/2)-20,
                               y: contentView.frame.size.height-25,
                               width: contentView.frame.size.width-10,
                               height: 20)
         
-        imageView.frame = CGRect(x: (contentView.frame.size.width/2)-30,
+        profilePicture.frame = CGRect(x: (contentView.frame.size.width/2)-30,
                               y: 10,
                               width: contentView.frame.size.width-20,
                               height: 60)
+        
+//        profilePicture.layer.cornerRadius = 10
+        // Makes picture into circle
     
     }
+    
+//    var avatar: Avatar!{
+//        didSet{
+//            self.updateUI()
+//        }
+//    }
+//    
+//    func updateUI(){
+//        if let avatar = avatar{
+//            // Assign Image to Model image (FireBase in the future)
+//            avatar.name = item.foodImage
+//            avatar.image = item.title
+//        }
+//        else{
+//            avatar.name.text = nil
+//            avatar.image = nil
+//        }
+//    }
 }

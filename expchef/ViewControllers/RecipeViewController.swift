@@ -84,9 +84,9 @@ class RecipeViewController: UIViewController, UIImagePickerControllerDelegate, U
                 }
                 
                 // Original
-//                let urlString = url.absoluteString
+                let urlString = url.absoluteString
                 // Luffy Test - Luffy only changes when picker appears and after you upload. Put this in viewload in profileviewlater
-                let urlString = "https://firebasestorage.googleapis.com/v0/b/expchef.appspot.com/o/images%2Favatars%2Fdp_luffy.jpg?alt=media&token=0209f366-eb7b-4839-b980-fa80810d8e38"
+//                let urlString = "https://firebasestorage.googleapis.com/v0/b/expchef.appspot.com/o/images%2Favatars%2Fdp_luffy.jpg?alt=media&token=0209f366-eb7b-4839-b980-fa80810d8e38"
                 print("Download URL: \(urlString)")
                 
                 DispatchQueue.main.async {

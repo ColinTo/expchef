@@ -123,20 +123,20 @@ struct RadarSwiftUIView: View {
             .stroke(self.MainColor, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
             
             // Label - ForEach returns view. For does not
-            ForEach(0..<self.dimensions.count){i in
-                Text(self.dimensions[i].rayCase.rawValue)
-                    .font(.system(size: 10))
-                    .foregroundColor(self.SubtleColor)
-                    .frame(width:self.labelWidth, height:10)
-                    // Flip text after it reaches a certain angle
-                    .rotationEffect(.degrees((
-                                        degAngle_fromFraction(numerator: i, denominator: self.dimensions.count) > 90 &&
-                                        degAngle_fromFraction(numerator: i, denominator: self.dimensions.count) < 270) ? 180 :0))
-                    .background(Color.clear)
-                    .offset(x: (self.width - (50))/2)
-                    // Sets the text rotation to Line with spoke lines
-                    .rotationEffect(.radians(Double(radAngle_fromFraction(numerator: i, denominator: self.dimensions.count))))
-            }
+//            ForEach(0..<self.dimensions.count){i in
+//                Text(self.dimensions[i].rayCase.rawValue)
+//                    .font(.system(size: 10))
+//                    .foregroundColor(self.SubtleColor)
+//                    .frame(width:self.labelWidth, height:10)
+//                    // Flip text after it reaches a certain angle
+//                    .rotationEffect(.degrees((
+//                                        degAngle_fromFraction(numerator: i, denominator: self.dimensions.count) > 90 &&
+//                                        degAngle_fromFraction(numerator: i, denominator: self.dimensions.count) < 270) ? 180 :0))
+//                    .background(Color.clear)
+//                    .offset(x: (self.width - (50))/2)
+//                    // Sets the text rotation to Line with spoke lines
+//                    .rotationEffect(.radians(Double(radAngle_fromFraction(numerator: i, denominator: self.dimensions.count))))
+//            }
             // Create Outer Border
             Path { path in
                 for i in (0..<self.dimensions.count + 1){

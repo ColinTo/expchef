@@ -21,8 +21,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ksH-xa-xal">
                         <rect key="frame" x="5" y="5" width="404" height="143"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="A traditional dish from Italy. A very popular dish, especially at parties with lots of video games and ..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0U4-JE-VCu">
-                                <rect key="frame" x="160" y="64" width="196" height="66"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="A traditional dish from Italy. A very popular dish, especially at parties with lots of video.." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0U4-JE-VCu">
+                                <rect key="frame" x="160" y="64" width="196" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>

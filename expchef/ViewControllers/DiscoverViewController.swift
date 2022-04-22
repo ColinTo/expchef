@@ -73,6 +73,19 @@ class DiscoverViewController: UIViewController{
 
 // Web Layout
 extension DiscoverViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        var cellHeight:CGFloat = CGFloat()
+        
+        if indexPath.row < 1{
+            cellHeight = 225
+        }
+        else{
+            cellHeight = 150
+        }
+        
+        return cellHeight
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

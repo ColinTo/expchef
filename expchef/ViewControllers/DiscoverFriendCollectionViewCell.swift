@@ -31,6 +31,7 @@ class DiscoverFriendCollectionViewCell: UICollectionViewCell {
             // Assign Image to Model image (FireBase in the future)
             foodImageView.image = item.foodImage
             foodTitleLabel.text = item.title
+            foodTitleLabel.frame.size.width = 180
             backgroundColorView.backgroundColor = item.color
         }
         else{

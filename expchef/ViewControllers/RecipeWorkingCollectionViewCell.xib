@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,16 +19,18 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4Y-4b-2lg">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="250"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Working Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQf-8Y-yWE">
-                                <rect key="frame" x="27" y="115" width="96" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fav Recipe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQf-8Y-yWE">
+                                <rect key="frame" x="27" y="115" width="83" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="zQf-8Y-yWE" firstAttribute="top" secondItem="G4Y-4b-2lg" secondAttribute="top" constant="30" id="3ht-sk-fIi"/>
                             <constraint firstItem="zQf-8Y-yWE" firstAttribute="top" secondItem="G4Y-4b-2lg" secondAttribute="top" constant="115" id="UYT-uW-gQZ"/>
+                            <constraint firstItem="zQf-8Y-yWE" firstAttribute="leading" secondItem="G4Y-4b-2lg" secondAttribute="leading" constant="30" id="Uxf-J8-oLW"/>
                             <constraint firstItem="zQf-8Y-yWE" firstAttribute="leading" secondItem="G4Y-4b-2lg" secondAttribute="leading" constant="27" id="g20-fE-HfD"/>
                         </constraints>
                     </view>
@@ -46,9 +47,4 @@
             <point key="canvasLocation" x="214.49275362318843" y="120.53571428571428"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

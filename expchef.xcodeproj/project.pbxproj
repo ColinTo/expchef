@@ -38,6 +38,7 @@
 		A3CB22902810FC98002BED63 /* ProfileFriendListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CB228F2810FC97002BED63 /* ProfileFriendListCollectionViewController.swift */; };
 		A3CB229428110E72002BED63 /* ProfileFriendIconViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CB229328110E72002BED63 /* ProfileFriendIconViewCell.swift */; };
 		A3CB22B1281146F5002BED63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3CB22B0281146F4002BED63 /* GoogleService-Info.plist */; };
+		A3CB22B42811899C002BED63 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CB22B328118999002BED63 /* Avatar.swift */; };
 		A3F828B127EF1117003BED38 /* HomeUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F828B027EF1117003BED38 /* HomeUITabBarController.swift */; };
 		A3F828B427F8A327003BED38 /* RecipeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F828B327F8A326003BED38 /* RecipeCollectionViewController.swift */; };
 		A3F828B727F8A38F003BED38 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F828B627F8A38F003BED38 /* RecipeViewController.swift */; };
@@ -82,6 +83,7 @@
 		A3CB228F2810FC97002BED63 /* ProfileFriendListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFriendListCollectionViewController.swift; sourceTree = "<group>"; };
 		A3CB229328110E72002BED63 /* ProfileFriendIconViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFriendIconViewCell.swift; sourceTree = "<group>"; };
 		A3CB22B0281146F4002BED63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A3CB22B328118999002BED63 /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		A3F828B027EF1117003BED38 /* HomeUITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUITabBarController.swift; sourceTree = "<group>"; };
 		A3F828B327F8A326003BED38 /* RecipeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewController.swift; sourceTree = "<group>"; };
 		A3F828B627F8A38F003BED38 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			children = (
 				A3F828EB27FAA68C003BED38 /* Item.swift */,
 				A3CB225B280FE839002BED63 /* MapModel.swift */,
+				A3CB22B328118999002BED63 /* Avatar.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				A3A96B0A27DC059000148AFC /* SignUpViewController.swift in Sources */,
 				A37A61E827FBD2E600B58431 /* DiscoverFriendTableViewCell.swift in Sources */,
 				A3CB22902810FC98002BED63 /* ProfileFriendListCollectionViewController.swift in Sources */,
+				A3CB22B42811899C002BED63 /* Avatar.swift in Sources */,
 				A3F828EC27FAA68C003BED38 /* Item.swift in Sources */,
 				A341767527EDB485009F22D3 /* Constants.swift in Sources */,
 				A3CB229428110E72002BED63 /* ProfileFriendIconViewCell.swift in Sources */,
