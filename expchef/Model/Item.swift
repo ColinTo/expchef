@@ -30,6 +30,18 @@ class Item
                  color:UIColor(red:255,green:255,blue:255,alpha:1)),
             Item(title: "Pizza",
                  foodImage: UIImage(named: "f_pizza")!,
+                 color:UIColor(red:255,green:255,blue:255,alpha:1)),
+            Item(title: "Ramen",
+                 foodImage: UIImage(named: "f_ramen")!,
+                 color:UIColor(red:255,green:255,blue:255,alpha:1)),
+            Item(title: "Sushi",
+                 foodImage: UIImage(named: "f_sushi")!,
+                 color:UIColor(red:255,green:255,blue:255,alpha:1)),
+            Item(title: "Tacos",
+                 foodImage: UIImage(named: "f_tacos")!,
+                 color:UIColor(red:255,green:255,blue:255,alpha:1)),
+            Item(title: "Burger",
+                 foodImage: UIImage(named: "f_burger")!,
                  color:UIColor(red:255,green:255,blue:255,alpha:1))
         ]
     }

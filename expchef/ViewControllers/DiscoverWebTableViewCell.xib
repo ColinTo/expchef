@@ -21,10 +21,14 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ksH-xa-xal">
                         <rect key="frame" x="5" y="5" width="404" height="143"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="A traditional dish from Italy. A very popular dish, especially at parties with lots of video.." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0U4-JE-VCu">
-                                <rect key="frame" x="160" y="64" width="196" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0U4-JE-VCu">
+                                <rect key="frame" x="154" y="63" width="230" height="75"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="ixe-Eo-l5c"/>
+                                    <constraint firstAttribute="height" constant="75" id="k1N-lz-RQT"/>
+                                </constraints>
+                                <string key="text">A Japanese noodle soup, with a rich flavoured broth, a variety of noodles,   a selection of meats or vegetables, often topped with a boiled egg.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -89,7 +93,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Y1n-4o-Gae" firstAttribute="top" secondItem="ksH-xa-xal" secondAttribute="top" constant="5" id="4Ja-cU-cZS"/>
+                            <constraint firstAttribute="bottom" secondItem="0U4-JE-VCu" secondAttribute="bottom" constant="5" id="WOh-US-SB0"/>
                             <constraint firstItem="Y1n-4o-Gae" firstAttribute="leading" secondItem="ksH-xa-xal" secondAttribute="leading" constant="5" id="wng-hU-KV6"/>
+                            <constraint firstItem="0U4-JE-VCu" firstAttribute="leading" secondItem="Y1n-4o-Gae" secondAttribute="trailing" constant="5" id="zY7-Br-1bW"/>
                         </constraints>
                     </view>
                 </subviews>
